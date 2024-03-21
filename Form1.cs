@@ -46,7 +46,7 @@ namespace Group_Project
         private readonly decimal[] prices = { 10, 15, 11, 20, 30 ,40 ,50 ,1, 9, 10, 11, 12 };
 
         //TODO make total here
-
+        private decimal total = 0;
 
          private int [,] ItemsAvailable = 
          {{9,8,5,4,3,5},

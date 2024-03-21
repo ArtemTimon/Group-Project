@@ -117,7 +117,7 @@ namespace Group_Project
             row.Cells.Add(item);
             var colour = new DataGridViewTextBoxCell()
             {
-                Value = Items[ColourListBox.SelectedIndex]
+                Value = Colours[ColourListBox.SelectedIndex]
             };
             row.Cells.Add(colour);
             var quantity = new DataGridViewTextBoxCell()

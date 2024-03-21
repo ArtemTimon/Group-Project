@@ -113,6 +113,7 @@ namespace Group_Project
 
         private void BagButton_Click(object sender, EventArgs e)
         {
+            var price = decimal.Parse(QuantityTextBox.Text) * prices[ItemListBox.SelectedIndex];
             var row = new DataGridViewRow();
             var item = new DataGridViewTextBoxCell()
             {
@@ -134,18 +135,14 @@ namespace Group_Project
                 Value = (ManGistButton.Checked ? "Man" : "Woman ") + " Gift Box"
             };
             row.Cells.Add(button);
-            var price = new DataGridViewTextBoxCell()
+            var priceRow = new DataGridViewTextBoxCell()
             {
-                Value = decimal.Parse(QuantityTextBox.Text) * prices[ItemListBox.SelectedIndex]
+                Value = price
             };
             
-            row.Cells.Add(price);
+            row.Cells.Add(priceRow);
             TransactionDataGrid.Rows.Add(row);
-
-            //TODO add price to total
-
-
-
+            total += price;
         }
 
         private void ComfirmButton_Click(object sender, EventArgs e)
